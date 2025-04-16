@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI工具导航 - 专业AI工具集合</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PGC94SDDC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-4PGC94SDDC');
+    </script>
+
+    <!-- 引入图标库 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-color: #2c3e50;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .search-box {
+            margin-top: 1.5rem;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            max-width: 600px;
+            padding: 15px 20px 15px 45px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            background-color: rgba(255,255,255,0.95);
+        }
+
+        .search-box::before {
+            content: '\f002';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--secondary-color);
+        }
+
+        .category-section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 1.5rem;
+        }
+
+        .tool-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: start;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .tool-icon {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--accent-color);
+            border-radius: 10px;
+            color: white;
+            font-size: 24px;
+        }
+
+        .tool-content {
+            flex: 1;
+        }
+
+        .tool-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+
+        .tool-content p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .tool-content a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .tool-content a:hover {
+            text-decoration: underline;
+        }
+
+        .tool-content a i {
+            margin-left: 5px;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .category-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .category-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .category-card h3 i {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+
+        .tool-list {
+            margin-top: 15px;
+        }
+
+        .tool-item {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .tool-item:last-child {
+            border-bottom: none;
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>AI工具导航</h1>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="搜索AI工具...">
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="category-section">
+            <h2 class="section-title">热门推荐</h2>
+            <div class="tools-grid" id="hotTools">
+                <!-- 热门工具将通过JavaScript动态加载 -->
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h2 class="section-title">AI工具分类</h2>
+            <div class="category-grid">
+                <div class="category-card" data-category="chat">
+                    <h3><i class="fas fa-comments"></i>AI对话</h3>
+                    <div class="tool-list"></div>
+                </div>
+                <div class="category-card" data-category="image">
+                    <h3><i class="fas fa-image"></i>AI绘画</h3>
+                    <div class="tool-list"></div>
+                </div>
+                <div class="category-card" data-category="video">
+                    <h3><i class="fas fa-video"></i>AI视频</h3>
+                    <div class="tool-list"></div>
+                </div>
+                <div class="category-card" data-category="write">
+                    <h3><i class="fas fa-pen"></i>AI写作</h3>
+                    <div class="tool-list"></div>
+                </div>
+                <div class="category-card" data-category="code">
+                    <h3><i class="fas fa-code"></i>AI编程</h3>
+                    <div class="tool-list"></div>
+                </div>
+                <div class="category-card" data-category="audio">
+                    <h3><i class="fas fa-music"></i>AI音频</h3>
+                    <div class="tool-list"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 AI工具导航 | 精选优质AI工具</p>
+        </div>
+    </footer>
+
+    <script>
+        const aiTools = [
+            {
+                name: "ChatGPT",
+                description: "OpenAI开发的大语言模型，可用于对话、写作、编程等",
+                url: "https://chat.openai.com",
+                category: "chat",
+                icon: "fa-robot",
+                hot: true
+            },
+            {
+                name: "Midjourney",
+                description: "AI艺术创作工具，可生成高质量图像",
+                url: "https://www.midjourney.com",
+                category: "image",
+                icon: "fa-palette",
+                hot: true
+            },
+            {
+                name: "Claude",
+                description: "Anthropic开发的AI助手，擅长分析和写作",
+                url: "https://claude.ai",
+                category: "chat",
+                icon: "fa-comments",
+                hot: true
+            },
+            {
+                name: "Stable Diffusion",
+                description: "开源的AI图像生成模型",
+                url: "https://stability.ai",
+                category: "image",
+                icon: "fa-image",
+                hot: true
+            },
+            {
+                name: "Synthesia",
+                description: "专业的AI视频生成平台",
+                url: "https://www.synthesia.io",
+                category: "video",
+                icon: "fa-video",
+                hot: true
+            },
+            {
+                name: "Copy.ai",
+                description: "AI营销文案写作助手",
+                url: "https://www.copy.ai",
+                category: "write",
+                icon: "fa-pen",
+                hot: true
+            },
+            {
+                name: "GitHub Copilot",
+                description: "AI代码助手，提供智能代码补全",
+                url: "https://github.com/features/copilot",
+                category: "code",
+                icon: "fa-code",
+                hot: true
+            },
+            {
+                name: "Runway",
+                description: "AI视频编辑和特效工具",
+                url: "https://runway.ml",
+                category: "video",
+                icon: "fa-film",
+                hot: false
+            },
+            {
+                name: "Murf",
+                description: "AI语音生成工具",
+                url: "https://murf.ai",
+                category: "audio",
+                icon: "fa-microphone",
+                hot: true
+            },
+            {
+                name: "Jasper",
+                description: "AI内容创作平台",
+                url: "https://www.jasper.ai",
+                category: "write",
+                icon: "fa-pen-fancy",
+                hot: true
+            }
+        ];
+
+        function createToolCard(tool) {
+            const card = document.createElement('div');
+            card.className = 'tool-card';
+            card.innerHTML = `
+                <div class="tool-icon">
+                    <i class="fas ${tool.icon}"></i>
+                </div>
+                <div class="tool-content">
+                    <h3>${tool.name}</h3>
+                    <p>${tool.description}</p>
+                    <a href="${tool.url}" target="_blank">访问网站 <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            `;
+            return card;
+        }
+
+        function loadHotTools() {
+            const hotToolsContainer = document.getElementById('hotTools');
+            const hotTools = aiTools.filter(tool => tool.hot);
+            hotTools.forEach(tool => {
+                hotToolsContainer.appendChild(createToolCard(tool));
+            });
+        }
+
+        function loadToolsByCategory() {
+            const categories = document.querySelectorAll('.category-card');
+            categories.forEach(category => {
+                const categoryName = category.dataset.category;
+                const toolList = category.querySelector('.tool-list');
+                const categoryTools = aiTools.filter(tool => tool.category === categoryName);
+                
+                categoryTools.forEach(tool => {
+                    const toolItem = document.createElement('div');
+                    toolItem.className = 'tool-item';
+                    toolItem.innerHTML = `
+                        <div class="tool-content">
+                            <h3>${tool.name}</h3>
+                            <p>${tool.description}</p>
+                            <a href="${tool.url}" target="_blank">访问网站 <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    `;
+                    toolList.appendChild(toolItem);
+                });
+            });
+        }
+
+        function initSearch() {
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+                const allTools = document.querySelectorAll('.tool-card, .tool-item');
+                
+                allTools.forEach(tool => {
+                    const toolName = tool.querySelector('h3')?.textContent.toLowerCase();
+                    const toolDesc = tool.querySelector('p')?.textContent.toLowerCase();
+                    
+                    if (toolName?.includes(searchTerm) || toolDesc?.includes(searchTerm)) {
+                        tool.style.display = '';
+                    } else {
+                        tool.style.display = 'none';
+                    }
+                });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadHotTools();
+            loadToolsByCategory();
+            initSearch();
+        });
+    </script>
+</body>
+</html>
