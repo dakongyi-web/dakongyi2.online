@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Fill 3D - Fun Games | 好玩的游戏</title>
+    <meta name="description" content="Play Color Fill 3D, an addictive puzzle game where you fill spaces with color. Enjoy this fun game online for free. | 玩转色彩填充3D，一款令人上瘾的益智游戏，免费在线体验！">
+    <link rel="canonical" href="https://dakongyi4.store">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R7P9R76H3J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-R7P9R76H3J');
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --apple-blue: #007AFF;
+            --apple-red: #FF3B30;
+            --apple-green: #34C759;
+            --apple-yellow: #FFCC00;
+            --apple-orange: #FF9500;
+            --apple-purple: #AF52DE;
+            --apple-gray: #8E8E93;
+            --apple-light-gray: #F2F2F7;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: var(--apple-light-gray);
+            color: #1D1D1F;
+        }
+        
+        .game-container {
+            aspect-ratio: 16/9;
+            max-height: 80vh;
+        }
+        
+        .apple-btn {
+            background-color: var(--apple-blue);
+            transition: all 0.3s ease;
+        }
+        
+        .apple-btn:hover {
+            background-color: #0062CC;
+            transform: translateY(-2px);
+        }
+        
+        .feature-card {
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .game-container {
+                aspect-ratio: 4/3;
+                height: 60vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <a href="/" class="flex items-center">
+                <span class="text-2xl font-bold text-gray-900">dakongyi4.store</span>
+            </a>
+            <div class="hidden md:flex space-x-4">
+                <a href="#features" class="text-gray-700 hover:text-gray-900">Features</a>
+                <a href="#how-to-play" class="text-gray-700 hover:text-gray-900">How to Play</a>
+                <a href="#about" class="text-gray-700 hover:text-gray-900">About</a>
+                <button class="language-toggle px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200">EN / 中文</button>
+            </div>
+            <button class="md:hidden focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <section class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Color Fill 3D - Addictive Puzzle Game</h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8" id="game-description-en">Fill the board with colors while avoiding obstacles in this challenging 3D puzzle game!</p>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8 hidden" id="game-description-zh">在这款具有挑战性的3D益智游戏中，用色彩填充棋盘，同时避开障碍物！</p>
+        </section>
+
+        <section class="mb-16">
+            <div class="game-container w-full mx-auto bg-white shadow-lg rounded-xl overflow-hidden">
+                <iframe src="https://play.famobi.com/color-fill-3d" frameborder="0" class="w-full h-full" allowfullscreen></iframe>
+            </div>
+            <div class="text-center mt-6">
+                <button class="apple-btn text-white px-8 py-3 rounded-full font-medium shadow-lg">Play Fullscreen</button>
+            </div>
+        </section>
+
+        <section id="features" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-center text-gray-900">Game Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="feature-card bg-white p-6 shadow-sm">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <svg class="h-6 w-6 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2" id="feature1-en">Challenging Puzzles</h3>
+                    <h3 class="text-xl font-semibold mb-2 hidden" id="feature1-zh">具有挑战性的谜题</h3>
+                    <p class="text-gray-600" id="feature1-desc-en">Multiple levels with increasing difficulty to test your strategic thinking.</p>
+                    <p class="text-gray-600 hidden" id="feature1-desc-zh">多个难度递增的关卡，测试您的战略思维。</p>
+                </div>
+                
+                <div class="feature-card bg-white p-6 shadow-sm">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <svg class="h-6 w-6 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2" id="feature2-en">Colorful 3D Graphics</h3>
+                    <h3 class="text-xl font-semibold mb-2 hidden" id="feature2-zh">色彩鲜艳的3D图形</h3>
+                    <p class="text-gray-600" id="feature2-desc-en">Immersive 3D environment with vibrant colors and smooth animations.</p>
+                    <p class="text-gray-600 hidden" id="feature2-desc-zh">沉浸式3D环境，色彩鲜艳，动画流畅。</p>
+                </div>
+                
+                <div class="feature-card bg-white p-6 shadow-sm">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <svg class="h-6 w-6 text-purple-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2" id="feature3-en">Suitable for All Ages</h3>
+                    <h3 class="text-xl font-semibold mb-2 hidden" id="feature3-zh">适合所有年龄</h3>
+                    <p class="text-gray-600" id="feature3-desc-en">Simple to learn but difficult to master, perfect for casual gamers of any age.</p>
+                    <p class="text-gray-600 hidden" id="feature3-desc-zh">易于学习但难以掌握，非常适合任何年龄的休闲游戏玩家。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-to-play" class="mb-16 bg-white rounded-xl p-8 shadow-sm">
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">How to Play</h2>
+            <div class="space-y-4">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 bg-blue-100 rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                        <span class="text-blue-600 font-bold">1</span>
+                    </div>
+                    <p id="step1-en">Move your character around the board by swiping in the direction you want to go.</p>
+                    <p class="hidden" id="step1-zh">通过向您想要前进的方向滑动来移动您的角色。</p>
+                </div>
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 bg-blue-100 rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                        <span class="text-blue-600 font-bold">2</span>
+                    </div>
+                    <p id="step2-en">Your goal is to fill the entire board with your color while avoiding obstacles.</p>
+                    <p class="hidden" id="step2-zh">您的目标是用您的颜色填满整个棋盘，同时避开障碍物。</p>
+                </div>
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 bg-blue-100 rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                        <span class="text-blue-600 font-bold">3</span>
+                    </div>
+                    <p id="step3-en">Plan your moves carefully as you can't cross your own path or hit obstacles.</p>
+                    <p class="hidden" id="step3-zh">仔细规划您的移动，因为您不能穿过自己的路径或撞到障碍物。</p>
+                </div>
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 bg-blue-100 rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                        <span class="text-blue-600 font-bold">4</span>
+                    </div>
+                    <p id="step4-en">Complete levels to unlock new challenges and color themes!</p>
+                    <p class="hidden" id="step4-zh">完成关卡以解锁新的挑战和颜色主题！</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">About Color Fill 3D</h2>
+            <div class="bg-white rounded-xl p-8 shadow-sm">
+                <p class="mb-4 text-gray-700" id="about-en">Color Fill 3D is an engaging puzzle game that challenges your spatial awareness and strategic thinking. As you progress through the levels, you'll encounter increasingly complex board layouts and obstacles that will test your problem-solving skills. The game features smooth controls, vibrant visuals, and satisfying gameplay that will keep you entertained for hours. Whether you're looking for a quick gaming session or a longer challenge, Color Fill 3D offers the perfect balance of accessibility and depth.</p>
+                <p class="mb-4 text-gray-700 hidden" id="about-zh">色彩填充3D是一款引人入胜的益智游戏，挑战您的空间感知和战略思维。随着关卡的进行，您将遇到越来越复杂的棋盘布局和障碍物，这将测试您的解决问题的能力。游戏具有流畅的控制，鲜艳的视觉效果和令人满意的游戏玩法，将使您娱乐数小时。无论您是寻找快速的游戏会话还是更长时间的挑战，色彩填充3D都提供了可访问性和深度的完美平衡。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">dakongyi4.store</h3>
+                    <p class="text-gray-400" id="footer-desc-en">Your destination for fun and challenging online games.</p>
+                    <p class="text-gray-400 hidden" id="footer-desc-zh">您畅享有趣和具有挑战性的在线游戏的目的地。</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4" id="quick-links-en">Quick Links</h3>
+                    <h3 class="text-xl font-bold mb-4 hidden" id="quick-links-zh">快速链接</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Home</a></li>
+                        <li><a href="#features" class="hover:text-white transition">Features</a></li>
+                        <li><a href="#how-to-play" class="hover:text-white transition">How to Play</a></li>
+                        <li><a href="#about" class="hover:text-white transition">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4" id="legal-en">Legal</h3>
+                    <h3 class="text-xl font-bold mb-4 hidden" id="legal-zh">法律信息</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+                <p>&copy; 2023 dakongyi4.store - All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageToggle = document.querySelector('.language-toggle');
+            let isEnglish = true;
+            
+            languageToggle.addEventListener('click', function() {
+                isEnglish = !isEnglish;
+                
+                // Toggle visibility of elements with language-specific IDs
+                document.querySelectorAll('[id$="-en"]').forEach(el => {
+                    el.classList.toggle('hidden', !isEnglish);
+                });
+                
+                document.querySelectorAll('[id$="-zh"]').forEach(el => {
+                    el.classList.toggle('hidden', isEnglish);
+                });
+                
+                // Update the button text
+                languageToggle.textContent = isEnglish ? 'EN / 中文' : '中文 / EN';
+            });
+            
+            // Fullscreen button functionality
+            const fullscreenBtn = document.querySelector('.apple-btn');
+            const iframe = document.querySelector('iframe');
+            
+            fullscreenBtn.addEventListener('click', function() {
+                if (iframe.requestFullscreen) {
+                    iframe.requestFullscreen();
+                } else if (iframe.webkitRequestFullscreen) {
+                    iframe.webkitRequestFullscreen();
+                } else if (iframe.msRequestFullscreen) {
+                    iframe.msRequestFullscreen();
+                }
+            });
+            
+            // Mobile menu toggle
+            const menuButton = document.querySelector('.md\\:hidden');
+            menuButton.addEventListener('click', function() {
+                const menu = document.createElement('div');
+                menu.className = 'fixed inset-0 bg-gray-900 bg-opacity-90 z-50 flex flex-col items-center justify-center';
+                menu.innerHTML = `
+                    <button class="absolute top-6 right-6 text-white">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                    <div class="flex flex-col space-y-6 text-white text-xl">
+                        <a href="#features" class="hover:text-gray-300">Features</a>
+                        <a href="#how-to-play" class="hover:text-gray-300">How to Play</a>
+                        <a href="#about" class="hover:text-gray-300">About</a>
+                        <button class="language-toggle-mobile px-8 py-2 rounded-full bg-white text-gray-900 hover:bg-gray-200">EN / 中文</button>
+                    </div>
+                `;
+                document.body.appendChild(menu);
+                
+                // Handle closing the mobile menu
+                const closeButton = menu.querySelector('button');
+                closeButton.addEventListener('click', function() {
+                    document.body.removeChild(menu);
+                });
+                
+                // Handle mobile menu language toggle
+                const mobileLanguageToggle = menu.querySelector('.language-toggle-mobile');
+                mobileLanguageToggle.addEventListener('click', function() {
+                    languageToggle.click();
+                    mobileLanguageToggle.textContent = isEnglish ? 'EN / 中文' : '中文 / EN';
+                });
+                
+                // Handle mobile menu links
+                menu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        document.body.removeChild(menu);
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
